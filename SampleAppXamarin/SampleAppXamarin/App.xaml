@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SampleAppXamarin.App" 
+             xmlns:local="clr-namespace:SampleAppXamarin.Pages;" >
+  <Application.Resources>
+    <ResourceDictionary>
+      <Color x:Key="primaryBlue">#44BFDF</Color>
+      <!--<vm:ViewModelLocator d4p1:Key="Locator" 
+                           xmlns:d4p1="http://schemas.microsoft.com/winfx/2006/xaml" 
+                           xmlns:vm="clr-namespace:SampleAppXamarin.ViewModels" />-->
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>
