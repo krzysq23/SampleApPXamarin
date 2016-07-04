@@ -35,7 +35,7 @@ namespace SampleAppXamarin.Services
             return null;
         }
 
-        public Task<IEnumerable<ProductImage>> GetProductImageByProductId(string productId)
+        public Task<IEnumerable<ProductImage>> GetProductImageByProductId(int productId)
         {
             IEnumerable<ProductImage> productImage = _productImage.Where(w => w.ProductId == productId).AsQueryable();
             return Task.FromResult(productImage);
@@ -60,6 +60,7 @@ namespace SampleAppXamarin.Services
 
             var u1 = new User
             {
+                Id = 1,
                 UserName = "demo",
                 Password = "demo"
             };
@@ -76,28 +77,28 @@ namespace SampleAppXamarin.Services
 
             var p1 = new Product
             {
-                ProductId = "1",
+                Id = 1,
                 Name = "audi A4"
             };
             items.Add(p1);
 
             var p2 = new Product
             {
-                ProductId = "2",
+                Id = 2,
                 Name = "bmw m3"
             };
             items.Add(p2);
 
             var p3 = new Product
             {
-                ProductId = "3",
+                Id = 3,
                 Name = "bmw m5"
             };
             items.Add(p3);
 
             var p4 = new Product
             {
-                ProductId = "4",
+                Id = 4,
                 Name = "ferrari 458 italia"
             };
             items.Add(p4);
@@ -113,7 +114,8 @@ namespace SampleAppXamarin.Services
 
             var p1 = new ProductImage
             {
-                ProductId = "1",
+                Id = 1,
+                ProductId = 1,
                 Url = @"http://s3.caradvice.com.au/thumb/1000/562/wp-content/uploads/2015/11/2015-audi-a4-runout-CA.jpg",
                 UrlThubnail = @"https://upload.wikimedia.org/wikipedia/commons/3/32/Audi_A4_allroad_quattro_Phantomschwarz.JPG",
                 Name = "audi A4",
@@ -123,7 +125,8 @@ namespace SampleAppXamarin.Services
 
             var p2 = new ProductImage
             {
-                ProductId = "1",
+                Id = 2,
+                ProductId = 1,
                 Url = @"http://s3.caradvice.com.au/thumb/1000/562/wp-content/uploads/2015/11/2015-audi-a4-runout-CA.jpg",
                 UrlThubnail = @"https://upload.wikimedia.org/wikipedia/commons/3/32/Audi_A4_allroad_quattro_Phantomschwarz.JPG",
                 Name = "audi A4",
@@ -133,7 +136,8 @@ namespace SampleAppXamarin.Services
 
             var p3 = new ProductImage
             {
-                ProductId = "1",
+                Id = 3,
+                ProductId = 1,
                 Url = @"http://s3.caradvice.com.au/thumb/1000/562/wp-content/uploads/2015/11/2015-audi-a4-runout-CA.jpg",
                 UrlThubnail = @"https://upload.wikimedia.org/wikipedia/commons/3/32/Audi_A4_allroad_quattro_Phantomschwarz.JPG",
                 Name = "audi A4",
@@ -143,7 +147,8 @@ namespace SampleAppXamarin.Services
 
             var p4 = new ProductImage
             {
-                ProductId = "2",
+                Id = 4,
+                ProductId = 2,
                 Url = @"http://pictures.topspeed.com/IMG/crop/201601/bmw-m3-rs-e9x-by-g-p-11_600x0w.jpg",
                 UrlThubnail = @"http://cdn10.se.smcloud.net/t/photos/t/312774/bmw-m3-e92_19578852.jpg",
                 Name = "bmw m3",
@@ -153,8 +158,9 @@ namespace SampleAppXamarin.Services
 
             var p5 = new ProductImage
             {
-                ProductId = "2",
-                Url = @"http://s3.caradvice.com.au/thumb/1000/562/wp-content/uploads/2015/11/2015-audi-a4-runout-CA.jpg",
+                Id = 5,
+                ProductId = 2,
+                Url = @"http://pictures.topspeed.com/IMG/crop/201601/bmw-m3-rs-e9x-by-g-p-11_600x0w.jpg",
                 UrlThubnail = @"http://cdn10.se.smcloud.net/t/photos/t/312774/bmw-m3-e92_19578852.jpg",
                 Name = "bmw m3",
                 Description = "bmw m3"
@@ -163,7 +169,8 @@ namespace SampleAppXamarin.Services
 
             var p6 = new ProductImage
             {
-                ProductId = "2",
+                Id = 6,
+                ProductId = 2,
                 Url = @"http://pictures.topspeed.com/IMG/crop/201601/bmw-m3-rs-e9x-by-g-p-11_600x0w.jpg",
                 UrlThubnail = @"http://cdn10.se.smcloud.net/t/photos/t/312774/bmw-m3-e92_19578852.jpg",
                 Name = "bmw m3",
@@ -173,7 +180,8 @@ namespace SampleAppXamarin.Services
 
             var p7 = new ProductImage
             {
-                ProductId = "3",
+                Id = 7,
+                ProductId = 3,
                 Url = @"http://s3.caradvice.com.au/thumb/1000/562/wp-content/uploads/2015/08/2015-bmw-m5-pure-3.jpg",
                 UrlThubnail = @"http://cdn10.se.smcloud.net/t/photos/t/312774/bmw-m3-e92_19578852.jpg",
                 Name = "bmw m5",
@@ -183,7 +191,8 @@ namespace SampleAppXamarin.Services
 
             var p8 = new ProductImage
             {
-                ProductId = "3",
+                Id = 8,
+                ProductId = 3,
                 Url = @"http://s3.caradvice.com.au/thumb/1000/562/wp-content/uploads/2015/08/2015-bmw-m5-pure-3.jpg",
                 UrlThubnail = @"http://cdn10.se.smcloud.net/t/photos/t/312774/bmw-m3-e92_19578852.jpg",
                 Name = "bmw m5",
@@ -193,8 +202,9 @@ namespace SampleAppXamarin.Services
 
             var p9 = new ProductImage
             {
-                ProductId = "3",
-                Url = @"http://pictures.topspeed.com/IMG/crop/201601/bmw-m3-rs-e9x-by-g-p-11_600x0w.jpg",
+                Id = 9,
+                ProductId = 3,
+                Url = @"http://s3.caradvice.com.au/thumb/1000/562/wp-content/uploads/2015/08/2015-bmw-m5-pure-3.jpg",
                 UrlThubnail = @"http://cdn10.se.smcloud.net/t/photos/t/312774/bmw-m3-e92_19578852.jpg",
                 Name = "bmw m3",
                 Description = "bmw m3"
@@ -203,7 +213,8 @@ namespace SampleAppXamarin.Services
 
             var p10 = new ProductImage
             {
-                ProductId = "4",
+                Id = 10,
+                ProductId = 4,
                 Url = @"http://s1.blomedia.pl/autokult.pl/images/2010/08/2010-ferrari-458-italia.jpg",
                 UrlThubnail = @"http://cdn10.se.smcloud.net/t/photos/t/312774/bmw-m3-e92_19578852.jpg",
                 Name = "ferrari 458 italia",

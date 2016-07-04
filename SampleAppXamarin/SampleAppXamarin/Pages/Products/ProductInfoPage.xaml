@@ -13,7 +13,7 @@
       <StackLayout Padding="15" VerticalOptions="Center" HorizontalOptions="Center">
 
         <ListView
-          RowHeight="90"
+          RowHeight="140"
           x:Name="mListView"
           ItemsSource="{Binding ProductImages}"
           SelectedItem="{Binding SelectedProductImageItem, Mode=TwoWay}">
@@ -22,7 +22,7 @@
               <ViewCell>
                 <ViewCell.View>
                   <StackLayout Orientation="Vertical" HorizontalOptions="Center">
-                    <Image WidthRequest="100" Source="{Binding Url}"/>
+                    <Image WidthRequest="200" Source="{Binding Url}"/>
                     <Label Text="{Binding Name}" HorizontalOptions="Center" />
                   </StackLayout>
                 </ViewCell.View>

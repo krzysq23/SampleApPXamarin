@@ -101,7 +101,7 @@ namespace SampleAppXamarin.ViewModels
 
             try
             {
-                var productImages = await _service.GetProductImageByProductId(_item.ProductId);
+                var productImages = await _service.GetProductImageByProductId(_item.Id);
                 ProductImages.Clear();
                 foreach (var pr in productImages)
                 {

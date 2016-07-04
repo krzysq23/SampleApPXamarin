@@ -19,7 +19,7 @@ namespace SampleAppXamarin.Services
         #region Products
         Task<IEnumerable<Product>> GetProducts();
 
-        Task<IEnumerable<ProductImage>> GetProductImageByProductId(string productId);
+        Task<IEnumerable<ProductImage>> GetProductImageByProductId(int productId);
         #endregion
     }
 }

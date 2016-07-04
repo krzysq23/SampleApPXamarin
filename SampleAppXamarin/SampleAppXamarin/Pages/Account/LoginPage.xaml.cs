@@ -1,4 +1,5 @@
 ﻿using SampleAppXamarin.Helpers;
+using SampleAppXamarin.Resx;
 using SampleAppXamarin.Services;
 using System;
 using System.Collections.Generic;
@@ -18,24 +19,39 @@ namespace SampleAppXamarin.Pages
         {
             InitializeComponent();
             _service = ServiceLocator.Instance.Resolve<ISampleAppService>();
+
+            DataResource();
         }
 
         async void OnSubmitButtonClicked(object sender, EventArgs e)
         {
-            var isValid = await _service.LogIn(username.Text, password.Text);
+            var isValid = await _service.LogIn(usernameEntry.Text, passwordEntry.Text);
             if (isValid)
             {
                 App.IsUserLoggedIn = true;
-                var navigation = Application.Current.MainPage as NavigationPage;
-                await navigation.PushAsync(new Pages.ProductListPage());
-                //Navigation.InsertPageBefore(new ProductListPage(), this);
-                //await Navigation.PopAsync();
+                Navigation.InsertPageBefore(new MainPage(), this);
+                await Navigation.PopAsync();
             }
             else
             {
-                messageLabel.Text = "Dane niepoprawne";
-                password.Text = string.Empty;
+                messageLabel.Text = AppResource.IncorrectData;
+                passwordEntry.Text = string.Empty;
             }
+        }
+
+        void xxx(object sender, EventArgs e)
+        {
+        }
+
+        public void DataResource()
+        {
+            userLbl.Text = AppResource.Username;
+            usernameEntry.Placeholder = AppResource.Username;
+            passwordLbl.Text = AppResource.Password;
+            passwordEntry.Placeholder = AppResource.Password;
+            submitBtn.Text = AppResource.Submit;
+
+
         }
     }
 }

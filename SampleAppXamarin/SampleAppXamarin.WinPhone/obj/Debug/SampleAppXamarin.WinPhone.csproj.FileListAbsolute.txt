@@ -45,3 +45,14 @@ C:\Projects\SampleAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debu
 C:\Projects\SampleAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\Xamarin.Forms.Platform.WinRT.pri.xml
 C:\Projects\SampleAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\Xamarin.Forms.Platform.WinRT.Phone.pri.xml
 C:\Projects\SampleAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\ProjectArchitectures.txt
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\SampleAppXamarin.WinPhone.csprojResolveAssemblyReference.cache
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\App.g.i.cs
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\App.g.cs
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\MainPage.g.i.cs
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\MainPage.g.cs
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\XamlTypeInfo.g.cs
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\App.xaml
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\MainPage.xaml
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\App.xbf
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\MainPage.xbf
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.WinPhone\obj\Debug\XamlSaveStateFile.xml

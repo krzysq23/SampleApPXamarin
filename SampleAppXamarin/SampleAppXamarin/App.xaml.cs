@@ -1,9 +1,11 @@
 ﻿using SampleAppXamarin.Helpers;
+using SampleAppXamarin.Resx;
 using SampleAppXamarin.Services;
 using SampleAppXamarin.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,8 +23,21 @@ namespace SampleAppXamarin
 
             bool useMock = true;
 
+            var assembly = typeof(App).GetTypeInfo().Assembly;
+            foreach (var res in assembly.GetManifestResourceNames())
+                System.Diagnostics.Debug.WriteLine(" ### found resource: " + res);
+
             if (useMock)
+            {
                 ServiceLocator.Instance.Add<ISampleAppService, MockSampleAppService>();
+                DependencyService.Get<ILocalize>().SetLocale();
+            }
+            
+            //if (Device.OS != TargetPlatform.WinPhone)
+            //{
+            //    DependencyService.Get<ILocalize>().SetLocale();
+            //    Resx.AppResources.Culture = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+            //}
 
             MainPage = new NavigationPage(new Pages.LoginPage())
             {
@@ -40,7 +55,7 @@ namespace SampleAppXamarin
             }
             else
             {
-                MainPage = new NavigationPage(new Pages.ProductListPage())
+                MainPage = new NavigationPage(new Pages.MainPage())
                 {
                     BarBackgroundColor = (Color)Current.Resources["primaryBlue"],
                     BarTextColor = Color.White
