@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleAppXamarin.Pages.Navigation
+namespace SampleAppXamarin.Models
 {
     public class MasterPageItem
     {

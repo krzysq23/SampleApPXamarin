@@ -18,7 +18,7 @@ namespace SampleAppXamarin.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            Zumero.DataGridComponent.Init();
+            //Zumero.DataGridComponent.Init();
             LoadApplication(new App());
         }
     }

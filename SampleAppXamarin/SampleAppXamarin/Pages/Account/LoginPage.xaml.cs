@@ -29,7 +29,7 @@ namespace SampleAppXamarin.Pages
             if (isValid)
             {
                 App.IsUserLoggedIn = true;
-                Navigation.InsertPageBefore(new MainPage(), this);
+                Navigation.InsertPageBefore(new HomePage(), this);
                 await Navigation.PopAsync();
             }
             else

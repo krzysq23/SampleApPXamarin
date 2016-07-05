@@ -1,0 +1,17 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleAppXamarin.Pages.HomePage"
+             Title="{Binding Title}">
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="StartAndExpand" Padding="20">
+
+      <Image WidthRequest="200" Source="logo.png"/>
+      <Label x:Name="title" HorizontalOptions="Center" />
+      <Button x:Name="addpProduct" Clicked="AddProductButtonClicked" />
+      <Button x:Name="productList" Clicked="ProductListButtonClicked" />
+      <Button x:Name="productListSql" Clicked="ProductListSqlButtonClicked" />
+
+    </StackLayout>
+
+  </ContentPage.Content>
+</ContentPage>

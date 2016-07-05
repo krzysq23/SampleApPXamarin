@@ -41,11 +41,12 @@
     <Compile Include="Data\ISQLite.cs" />
     <Compile Include="Data\ProductsDatabase.cs" />
     <Compile Include="Helpers\ServiceLocator.cs" />
+    <Compile Include="Models\MasterPageItem.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductImage.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Pages\Account\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="Pages\Account\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Account\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -53,15 +54,27 @@
     <Compile Include="Pages\Navigation\MasterPage.xaml.cs">
       <DependentUpon>MasterPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Navigation\MasterPageItem.cs" />
+    <Compile Include="Pages\Navigation\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Products\ImagePage.xaml.cs">
       <DependentUpon>ImagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Products\ProductEditPage.cs" />
+    <Compile Include="Pages\Products\ProductImageEditPage.xaml.cs">
+      <DependentUpon>ProductImageEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Products\ProductImagePage.xaml.cs">
+      <DependentUpon>ProductImagePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Products\ProductInfoPage.xaml.cs">
       <DependentUpon>ProductInfoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Products\AddProductPage.xaml.cs">
       <DependentUpon>AddProductPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Products\ProductListPageDB.xaml.cs">
+      <DependentUpon>ProductListPageDB.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Products\ProductListPage.xaml.cs">
       <DependentUpon>ProductListPage.xaml</DependentUpon>
@@ -87,7 +100,12 @@
     <Compile Include="Resx\Localize.cs" />
     <Compile Include="Services\ISampleAppService.cs" />
     <Compile Include="Services\MockSampleAppService.cs" />
+    <Compile Include="ViewModels\ProductImageEditViewModel.cs" />
+    <Compile Include="ViewModels\AddProductViewModel.cs" />
+    <Compile Include="ViewModels\ProductImageViewModel.cs" />
     <Compile Include="ViewModels\ProductInfoViewModel.cs" />
+    <Compile Include="ViewModels\ProductListDBViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
@@ -213,13 +231,37 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\Account\MainPage.xaml">
+    <EmbeddedResource Include="Pages\Account\HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Navigation\MasterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Products\ProductListPageDB.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Navigation\MenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Products\ProductImageEditPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Products\ProductImagePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

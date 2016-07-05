@@ -11,12 +11,11 @@ namespace SampleAppXamarin.Pages
 {
     public partial class ProductListPage : ContentPage
     {
-        ProductViewModel _viewModel; 
         public ProductListPage()
         {
             InitializeComponent();
-            _viewModel = new ProductViewModel();
+            var _viewModel = new ProductViewModel();
             BindingContext = _viewModel;
-        } 
+        }
     }
 }

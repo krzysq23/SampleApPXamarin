@@ -1,9 +1,11 @@
-﻿using SampleAppXamarin.Helpers;
+﻿using SampleAppXamarin.Data;
+using SampleAppXamarin.Helpers;
 using SampleAppXamarin.Resx;
 using SampleAppXamarin.Services;
 using SampleAppXamarin.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -16,6 +18,7 @@ namespace SampleAppXamarin
     public partial class App : Application
     {
         public static bool IsUserLoggedIn { get; set; }
+        static ProductsDatabase database;
 
         public App()
         {
@@ -30,9 +33,9 @@ namespace SampleAppXamarin
             if (useMock)
             {
                 ServiceLocator.Instance.Add<ISampleAppService, MockSampleAppService>();
-                DependencyService.Get<ILocalize>().SetLocale();
+                DependencyService.Get<ILocalize>().SetLocale(); 
             }
-            
+
             //if (Device.OS != TargetPlatform.WinPhone)
             //{
             //    DependencyService.Get<ILocalize>().SetLocale();
@@ -55,11 +58,23 @@ namespace SampleAppXamarin
             }
             else
             {
-                MainPage = new NavigationPage(new Pages.MainPage())
+                MainPage = new NavigationPage(new Pages.HomePage())
                 {
                     BarBackgroundColor = (Color)Current.Resources["primaryBlue"],
                     BarTextColor = Color.White
                 };
+            }
+        }
+
+        public static ProductsDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new ProductsDatabase();
+                }
+                return database;
             }
         }
 

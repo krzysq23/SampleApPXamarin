@@ -120,17 +120,41 @@
   <data name="AddProduct" xml:space="preserve">
     <value>Dodaj produkt</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edycja</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Strona domowa</value>
+  </data>
   <data name="IncorrectData" xml:space="preserve">
     <value>Niepoprawne dane</value>
   </data>
+  <data name="Info" xml:space="preserve">
+    <value>Informacje</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Wyloguj</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Hasło</value>
+  </data>
+  <data name="ProductExists" xml:space="preserve">
+    <value>Produkt już istnieje</value>
+  </data>
+  <data name="ProductImage" xml:space="preserve">
+    <value>Zdjecia produktu</value>
+  </data>
+  <data name="ProductImageEdit" xml:space="preserve">
+    <value>Edycja zdjęć produktu</value>
   </data>
   <data name="ProductList" xml:space="preserve">
     <value>List produktów</value>
   </data>
   <data name="ProductListSQL" xml:space="preserve">
     <value>Lista produktów(SQLite)</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Nazwa produktu</value>
   </data>
   <data name="Submit" xml:space="preserve">
     <value>Wyslij</value>

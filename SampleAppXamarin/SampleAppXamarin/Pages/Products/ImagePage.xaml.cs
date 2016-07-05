@@ -15,6 +15,8 @@ namespace SampleAppXamarin.Pages
         {
             InitializeComponent();
 
+            BindingContext = item;
+
             Content = new Image {
                 Source = item.Url
             };

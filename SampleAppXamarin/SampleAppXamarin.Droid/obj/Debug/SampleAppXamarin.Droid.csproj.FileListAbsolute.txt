@@ -144,13 +144,14 @@ C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\SQL
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\SQLite-net.xml
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\SQLitePCLPlugin_esqlite3.dll
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\SQLite-net.dll.mdb
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\obj\Debug\res\drawable-pl\logo.png
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\SampleAppXamarin.Droid.dll.mdb
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\SampleAppXamarin.dll.mdb
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\GalaSoft.MvvmLight.Extras.dll.mdb
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\Java.Interop.dll.mdb
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\Microsoft.Practices.ServiceLocation.dll.mdb
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\Mono.Android.dll.mdb
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\mscorlib.dll.mdb
-C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\SampleAppXamarin.dll.mdb
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\System.Core.dll.mdb
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\System.dll.mdb
@@ -178,6 +179,5 @@ C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\obj\Debug\and
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\obj\Debug\res\drawable-pl\logo.png
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\obj\Debug\SampleAppXamarin.Droid.dll.mdb
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin.Droid\bin\Debug\SampleAppXamarin.Droid.dll.mdb

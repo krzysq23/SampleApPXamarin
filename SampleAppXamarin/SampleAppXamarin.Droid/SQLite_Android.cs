@@ -13,6 +13,7 @@ using Xamarin.Forms;
 using SampleAppXamarin.Data;
 using SampleAppXamarin.Droid;
 using System.IO;
+using SQLite;
 
 [assembly: Dependency(typeof(SQLite_Android))]
 
@@ -26,13 +27,16 @@ namespace SampleAppXamarin.Droid
 
         public SQLite.SQLiteConnection GetConnection()
         {
-            var sqliteFilename = "SQLite.db3";
+            var sqliteFilename = "ProductSQLite.db3";
+
             string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder
             var path = Path.Combine(documentsPath, sqliteFilename);
-            // Create the connection
-            var conn = new SQLite.SQLiteConnection(path);
-            // Return the database connection
+
+            var conn = new SQLiteConnection(path);
+
             return conn;
         }
+
+
     }
 }

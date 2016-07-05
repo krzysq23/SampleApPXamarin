@@ -120,17 +120,41 @@
   <data name="AddProduct" xml:space="preserve">
     <value>Add Product</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
   <data name="IncorrectData" xml:space="preserve">
     <value>Data incorrect</value>
   </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>LogOut</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="ProductExists" xml:space="preserve">
+    <value>Product exists</value>
+  </data>
+  <data name="ProductImage" xml:space="preserve">
+    <value>Product Image</value>
+  </data>
+  <data name="ProductImageEdit" xml:space="preserve">
+    <value>Product Image Edit</value>
   </data>
   <data name="ProductList" xml:space="preserve">
     <value>Product list</value>
   </data>
   <data name="ProductListSQL" xml:space="preserve">
     <value>Product list (SQLIte)</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Product name</value>
   </data>
   <data name="Submit" xml:space="preserve">
     <value>Submit</value>

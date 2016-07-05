@@ -14,15 +14,19 @@ namespace SampleAppXamarin.Pages {
     using Xamarin.Forms.Xaml;
     
     
-    public partial class MainPage : global::Xamarin.Forms.MasterDetailPage {
+    public partial class ProductImageEditPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::MasterDetailPageNavigation.MasterPage masterPage;
+        private global::Xamarin.Forms.Label productName;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Entry productNameEntry;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(MainPage));
-            masterPage = this.FindByName<global::MasterDetailPageNavigation.MasterPage>("masterPage");
+            this.LoadFromXaml(typeof(ProductImageEditPage));
+            productName = this.FindByName<global::Xamarin.Forms.Label>("productName");
+            productNameEntry = this.FindByName<global::Xamarin.Forms.Entry>("productNameEntry");
         }
     }
 }

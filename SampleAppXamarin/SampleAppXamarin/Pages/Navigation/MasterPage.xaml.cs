@@ -1,4 +1,9 @@
-﻿using System;
+﻿using SampleAppXamarin.Helpers;
+using SampleAppXamarin.Models;
+using SampleAppXamarin.Resx;
+using SampleAppXamarin.Services;
+using SampleAppXamarin.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +11,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace SampleAppXamarin.Pages.Navigation
+namespace SampleAppXamarin.Pages
 {
     public partial class MasterPage : ContentPage
     {
@@ -19,21 +24,27 @@ namespace SampleAppXamarin.Pages.Navigation
             var masterPageItems = new List<MasterPageItem>();
             masterPageItems.Add(new MasterPageItem
             {
-                Title = "Contacts",
+                Title = AppResource.Home,
                 IconSource = "icon.png",
-                TargetType = typeof(AddProductPage)
+                TargetType = typeof(HomePage)
             });
             masterPageItems.Add(new MasterPageItem
             {
-                Title = "TodoList",
+                Title = AppResource.ProductList,
                 IconSource = "icon.png",
                 TargetType = typeof(ProductListPage)
             });
             masterPageItems.Add(new MasterPageItem
             {
-                Title = "Reminders",
+                Title = AppResource.ProductListSQL,
                 IconSource = "icon.png",
-                TargetType = typeof(ProductListPage)
+                TargetType = typeof(ProductListPageDB)
+            });
+            masterPageItems.Add(new MasterPageItem
+            {
+                Title = AppResource.Home,
+                IconSource = "icon.png",
+                TargetType = typeof(ProductListPageDB)
             });
 
             listView.ItemsSource = masterPageItems;

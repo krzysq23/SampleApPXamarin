@@ -13,61 +13,109 @@ namespace SampleAppXamarin.Data
     {
         static object locker = new object();
 
-        SQLiteConnection database;
+        SQLiteConnection _connection;
 
 
         public ProductsDatabase()
         {
-            database = DependencyService.Get<ISQLite>().GetConnection();
-            // create the tables
-            database.CreateTable<Product>();
+            _connection = DependencyService.Get<ISQLite>().GetConnection();
+            _connection.CreateTable<Product>();
+            _connection.CreateTable<ProductImage>();
         }
 
-        public IEnumerable<Product> GetItems()
+        public IEnumerable<Product> GetProducts()
         {
             lock (locker)
             {
-                return (from i in database.Table<Product>() select i).ToList();
+                return (from i in _connection.Table<Product>() select i).ToList();
             }
         }
 
-        public IEnumerable<Product> GetItemsNotDone()
+        public IEnumerable<Product> GetProductsNotDone()
         {
             lock (locker)
             {
-                return database.Query<Product>("SELECT * FROM [Product] WHERE [Done] = 0");
+                return _connection.Query<Product>("SELECT * FROM [Product] WHERE [Done] = 0");
             }
         }
 
-        public Product GetItem(int id)
+        public Product GetProduct(string name)
         {
             lock (locker)
             {
-                return database.Table<Product>().FirstOrDefault(x => x.Id == id);
+                return _connection.Table<Product>().FirstOrDefault(x => x.Name == name);
             }
         }
 
-        public int SaveItem(Product item)
+        public int SaveProduct(Product item)
         {
             lock (locker)
             {
                 if (item.Id != 0)
                 {
-                    database.Update(item);
+                    _connection.Update(item);
                     return item.Id;
                 }
                 else
                 {
-                    return database.Insert(item);
+                    return _connection.Insert(item);
                 }
             }
         }
 
-        public int DeleteItem(int id)
+        public int DeleteProduct(int id)
         {
             lock (locker)
             {
-                return database.Delete<Product>(id);
+                return _connection.Delete<Product>(id);
+            }
+        }
+
+        public IEnumerable<ProductImage> GetProductsImage(int id)
+        {
+            lock (locker)
+            {
+                return _connection.Table<ProductImage>().Where(w=> w.Id == id).ToList();
+            }
+        }
+
+        public IEnumerable<ProductImage> GetProductsImageNotDone()
+        {
+            lock (locker)
+            {
+                return _connection.Query<ProductImage>("SELECT * FROM [Product] WHERE [Done] = 0");
+            }
+        }
+
+        public ProductImage GetProductImage(int id)
+        {
+            lock (locker)
+            {
+                return _connection.Table<ProductImage>().FirstOrDefault(x => x.Id == id);
+            }
+        }
+
+        public int SaveProductImage(ProductImage item)
+        {
+            lock (locker)
+            {
+                if (item.Id != 0)
+                {
+                    _connection.Update(item);
+                    return item.Id;
+                }
+                else
+                {
+                    return _connection.Insert(item);
+                }
+            }
+        }
+
+        public int DeleteProductImage(int id)
+        {
+            lock (locker)
+            {
+                return _connection.Delete<ProductImage>(id);
             }
         }
     }
