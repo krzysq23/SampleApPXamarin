@@ -41,6 +41,8 @@
     <Compile Include="Data\ISQLite.cs" />
     <Compile Include="Data\ProductsDatabase.cs" />
     <Compile Include="Helpers\ServiceLocator.cs" />
+    <Compile Include="Managers\ProductImageManager.cs" />
+    <Compile Include="Managers\ProductManager.cs" />
     <Compile Include="Models\MasterPageItem.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductImage.cs" />
@@ -56,6 +58,9 @@
     </Compile>
     <Compile Include="Pages\Navigation\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Products\ImageEditPage.xaml.cs">
+      <DependentUpon>ImageEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Products\ImagePage.xaml.cs">
       <DependentUpon>ImagePage.xaml</DependentUpon>
@@ -102,6 +107,7 @@
     <Compile Include="Services\MockSampleAppService.cs" />
     <Compile Include="ViewModels\ProductImageEditViewModel.cs" />
     <Compile Include="ViewModels\AddProductViewModel.cs" />
+    <Compile Include="ViewModels\ImageEditViewModel.cs" />
     <Compile Include="ViewModels\ProductImageViewModel.cs" />
     <Compile Include="ViewModels\ProductInfoViewModel.cs" />
     <Compile Include="ViewModels\ProductListDBViewModel.cs" />
@@ -196,11 +202,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\audia4.jpg" />
-    <Content Include="Images\bmwm3.jpg" />
-    <Content Include="Images\bmwm5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Pages\Account\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -255,13 +256,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Pages\Products\ProductImagePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Pages\Products\ProductImageEditPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\Products\ProductImagePage.xaml">
+    <EmbeddedResource Include="Pages\Products\ImageEditPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

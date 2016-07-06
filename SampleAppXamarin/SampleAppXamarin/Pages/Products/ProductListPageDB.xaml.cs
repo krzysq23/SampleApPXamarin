@@ -20,6 +20,5 @@ namespace SampleAppXamarin.Pages
             var _viewModel = new ProductListDBViewModel();
             BindingContext = _viewModel;
         }
-
     }
 }

@@ -1,4 +1,5 @@
-﻿using SampleAppXamarin.Models;
+﻿using SampleAppXamarin.Managers;
+using SampleAppXamarin.Models;
 using SampleAppXamarin.Resx;
 using SampleAppXamarin.ViewModels;
 using System;
@@ -13,28 +14,30 @@ namespace SampleAppXamarin.Pages
 {
     public partial class AddProductPage : ContentPage
     {
-        public AddProductViewModel _viewModel;
+        private AddProductViewModel _viewModel;
+
         public AddProductPage()
         {
             InitializeComponent();
-            DataResource();
             _viewModel = new AddProductViewModel();
             BindingContext = _viewModel;
+            DataResource();
         }
 
         async void SaveClicked(object sender, EventArgs e)
         {
             _viewModel.Product.Name = productNameEntry.Text;
-            var product = App.Database.GetProduct(_viewModel.Product.Name); 
+            var product = App.ProductManager.GetProduct(_viewModel.Product.Name); 
             if(product == null)
             {
-                App.Database.SaveProduct(_viewModel.Product);
+                App.ProductManager.SaveProduct(_viewModel.Product);
                 var navigation = Application.Current.MainPage as NavigationPage;
+                //await navigation.PopAsync().ConfigureAwait(false);
                 await navigation.PushAsync(new Pages.ProductListPageDB());
             }
             else
             {
-                await DisplayAlert("Alert", AppResource.ProductExists, "OK");
+                await DisplayAlert(AppResource.Alert, AppResource.ProductExists, "OK");
             }
         }
 

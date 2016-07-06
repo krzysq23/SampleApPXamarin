@@ -1,7 +1,6 @@
 ﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SampleAppXamarin.Pages.MasterPage"
-             Title="{Binding Title}">
+             x:Class="SampleAppXamarin.Pages.MasterPage">
   <ContentPage.Content>
     <StackLayout VerticalOptions="FillAndExpand">
       <ListView x:Name="listView" VerticalOptions="FillAndExpand" SeparatorVisibility="None">

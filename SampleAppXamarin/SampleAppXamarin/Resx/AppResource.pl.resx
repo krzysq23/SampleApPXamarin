@@ -120,11 +120,35 @@
   <data name="AddProduct" xml:space="preserve">
     <value>Dodaj produkt</value>
   </data>
+  <data name="Alert" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="DeleteImageQuest" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć zdjęcie?</value>
+  </data>
+  <data name="DeleteProduct" xml:space="preserve">
+    <value>Usuń produkt</value>
+  </data>
+  <data name="DeleteProductQuest" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć produkt?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Opis</value>
+  </data>
   <data name="Edit" xml:space="preserve">
     <value>Edycja</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Strona domowa</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Zdjęcie</value>
+  </data>
+  <data name="ImageName" xml:space="preserve">
+    <value>Nazwa zdjecia</value>
   </data>
   <data name="IncorrectData" xml:space="preserve">
     <value>Niepoprawne dane</value>
@@ -134,6 +158,9 @@
   </data>
   <data name="LogOut" xml:space="preserve">
     <value>Wyloguj</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nie</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Hasło</value>
@@ -148,7 +175,7 @@
     <value>Edycja zdjęć produktu</value>
   </data>
   <data name="ProductList" xml:space="preserve">
-    <value>List produktów</value>
+    <value>Lista produktów</value>
   </data>
   <data name="ProductListSQL" xml:space="preserve">
     <value>Lista produktów(SQLite)</value>
@@ -162,7 +189,16 @@
   <data name="Title" xml:space="preserve">
     <value>Aplikacja Xamarin.Forms</value>
   </data>
+  <data name="Url" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="UrlThubnail" xml:space="preserve">
+    <value>Link miniaturki</value>
+  </data>
   <data name="Username" xml:space="preserve">
     <value>Użytkownik</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Tak</value>
   </data>
 </root>

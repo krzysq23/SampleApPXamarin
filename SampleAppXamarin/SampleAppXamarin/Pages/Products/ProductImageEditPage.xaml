@@ -4,15 +4,24 @@
              x:Class="SampleAppXamarin.Pages.ProductImageEditPage"
              Title="{Binding Name}">
   <ContentPage.Content >
+    
+    <StackLayout Padding="10" VerticalOptions="StartAndExpand">
 
-    <StackLayout Padding="10">
+      <Label x:Name="imageName" />
+      <Entry x:Name="imageNameEntry" Text="{Binding Name}" />
 
-      <Label x:Name="productName" />
-      <Entry x:Name="productNameEntry" Text="{Binding Name}" />
 
-      <Button Text="Save" Clicked="SaveClicked"/>
+      <Label x:Name="url" />
+      <Entry x:Name="urlEntry" Text="{Binding Url}" />
 
+      <Label x:Name="urlThubnail" />
+      <Entry x:Name="urlThubnailEntry" Text="{Binding UrlThubnail}" />
+
+      <Label x:Name="description" />
+      <Entry x:Name="descriptionEntry" Text="{Binding Description}" />
+      
+      <Button x:Name="save" Clicked="SaveClicked"/>
+      
     </StackLayout>
-
   </ContentPage.Content>
 </ContentPage>

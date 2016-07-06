@@ -1,16 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SampleAppXamarin.Pages.ProductImagePage">
+             x:Class="SampleAppXamarin.Pages.ProductImagePage"
+             Title="{Binding Name}">
   <ContentPage.Content >
     
-    <StackLayout>
+    <StackLayout Padding="10" VerticalOptions="StartAndExpand">
 
-      <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" >
-        <Label Text="{Binding Title}" FontSize="Large" HorizontalOptions="Start" />  
-      </StackLayout>
-
-      <StackLayout Padding="15" VerticalOptions="Center" HorizontalOptions="Center">
+      <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
         <ListView
           RowHeight="140"
@@ -19,19 +16,19 @@
           SelectedItem="{Binding SelectedProductImageItem, Mode=TwoWay}">
           <ListView.ItemTemplate>
             <DataTemplate>
-              <ViewCell>
-                <ViewCell.View>
-                  <StackLayout Orientation="Vertical" HorizontalOptions="Center">
-                    <Image WidthRequest="200" Source="{Binding Url}"/>
-                    <Label Text="{Binding Name}" HorizontalOptions="Center" />
-                  </StackLayout>
-                </ViewCell.View>
-              </ViewCell>
+                <ImageCell ImageSource="icon.png" 
+                            Text="{Binding Name}" 
+                            Detail="{Binding Description}" />
             </DataTemplate>
           </ListView.ItemTemplate>
         </ListView>
       </StackLayout>
+
+      <StackLayout HorizontalOptions="Center" >
+        <Button x:Name="deleteProduct" Clicked="DeleteProductClicked"/>
+      </StackLayout>
       
     </StackLayout>
+
   </ContentPage.Content>
 </ContentPage>

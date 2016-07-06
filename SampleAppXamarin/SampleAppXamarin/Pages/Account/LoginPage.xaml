@@ -4,7 +4,7 @@
              x:Class="SampleAppXamarin.Pages.LoginPage"
              xmlns:i18n="clr-namespace:SampleAppXamarin;assembly=SampleAppXamarin">
   <ContentPage.Content>
-    <StackLayout VerticalOptions="StartAndExpand">
+    <StackLayout VerticalOptions="StartAndExpand" Padding="10">
       <Label x:Name="userLbl"  />
       <Entry x:Name="usernameEntry"  />
       <Label x:Name="passwordLbl"  />

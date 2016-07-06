@@ -1,5 +1,6 @@
 ﻿using SampleAppXamarin.Data;
 using SampleAppXamarin.Helpers;
+using SampleAppXamarin.Managers;
 using SampleAppXamarin.Resx;
 using SampleAppXamarin.Services;
 using SampleAppXamarin.ViewModels;
@@ -18,7 +19,8 @@ namespace SampleAppXamarin
     public partial class App : Application
     {
         public static bool IsUserLoggedIn { get; set; }
-        static ProductsDatabase database;
+        private static ProductManager productManager;
+        private static ProductImageManager productImageManager;
 
         public App()
         {
@@ -27,20 +29,16 @@ namespace SampleAppXamarin
             bool useMock = true;
 
             var assembly = typeof(App).GetTypeInfo().Assembly;
-            foreach (var res in assembly.GetManifestResourceNames())
-                System.Diagnostics.Debug.WriteLine(" ### found resource: " + res);
 
             if (useMock)
             {
                 ServiceLocator.Instance.Add<ISampleAppService, MockSampleAppService>();
-                DependencyService.Get<ILocalize>().SetLocale(); 
             }
 
-            //if (Device.OS != TargetPlatform.WinPhone)
-            //{
-            //    DependencyService.Get<ILocalize>().SetLocale();
-            //    Resx.AppResources.Culture = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
-            //}
+            if (Device.OS != TargetPlatform.WinPhone)
+            {
+                DependencyService.Get<ILocalize>().SetLocale();
+            }
 
             MainPage = new NavigationPage(new Pages.LoginPage())
             {
@@ -66,15 +64,27 @@ namespace SampleAppXamarin
             }
         }
 
-        public static ProductsDatabase Database
+        public static ProductManager ProductManager
         {
             get
             {
-                if (database == null)
+                if (productManager == null)
                 {
-                    database = new ProductsDatabase();
+                    productManager = new ProductManager();
                 }
-                return database;
+                return productManager;
+            }
+        }
+
+        public static ProductImageManager ProductImageManager
+        {
+            get
+            {
+                if (productImageManager == null)
+                {
+                    productImageManager = new ProductImageManager();
+                }
+                return productImageManager;
             }
         }
 

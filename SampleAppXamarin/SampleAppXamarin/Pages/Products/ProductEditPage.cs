@@ -14,15 +14,16 @@ namespace SampleAppXamarin.Pages
 
         public ProductEditPage(Product item)
         {
-            var imagePage = new NavigationPage(new ProductImagePage(item));
+            var imagePage = new ProductImagePage(item);
             imagePage.Title = AppResource.Info;
 
-            //var editPage = new NavigationPage(new ProductImageEditPage(item));
-            //editPage.Title = AppResource.Edit;
+            var editPage = new ProductImageEditPage(item);
+            editPage.Title = AppResource.Edit;
 
+            this.Title = item.Name;
 
-            Children.Add(imagePage);
-            //Children.Add(editPage);
+            this.Children.Add(imagePage);
+            this.Children.Add(editPage);
         }
     }
 }

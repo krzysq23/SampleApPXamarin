@@ -20,9 +20,13 @@ namespace SampleAppXamarin.Pages {
         private global::Xamarin.Forms.ListView mListView;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button deleteProduct;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(ProductImagePage));
             mListView = this.FindByName<global::Xamarin.Forms.ListView>("mListView");
+            deleteProduct = this.FindByName<global::Xamarin.Forms.Button>("deleteProduct");
         }
     }
 }

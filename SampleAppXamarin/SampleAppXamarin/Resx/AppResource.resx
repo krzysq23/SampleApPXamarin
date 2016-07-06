@@ -120,11 +120,35 @@
   <data name="AddProduct" xml:space="preserve">
     <value>Add Product</value>
   </data>
+  <data name="Alert" xml:space="preserve">
+    <value>Alert</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteImageQuest" xml:space="preserve">
+    <value>Would you like delete the Image?</value>
+  </data>
+  <data name="DeleteProduct" xml:space="preserve">
+    <value>DeleteProduct</value>
+  </data>
+  <data name="DeleteProductQuest" xml:space="preserve">
+    <value>Would you like delete the Product?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
   <data name="Edit" xml:space="preserve">
     <value>Edit</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home Page</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="ImageName" xml:space="preserve">
+    <value>Image name</value>
   </data>
   <data name="IncorrectData" xml:space="preserve">
     <value>Data incorrect</value>
@@ -134,6 +158,9 @@
   </data>
   <data name="LogOut" xml:space="preserve">
     <value>LogOut</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
@@ -166,7 +193,16 @@
   <data name="Title" xml:space="preserve">
     <value>Aplication Xamarin.Forms</value>
   </data>
+  <data name="Url" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="UrlThubnail" xml:space="preserve">
+    <value>Url Thubnail</value>
+  </data>
   <data name="Username" xml:space="preserve">
     <value>User name</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
   </data>
 </root>

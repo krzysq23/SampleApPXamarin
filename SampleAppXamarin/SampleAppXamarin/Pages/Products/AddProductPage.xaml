@@ -9,7 +9,7 @@
       <Label x:Name="productName" />
       <Entry x:Name="productNameEntry" Text="{Binding Name}" />
 
-      <Button Text="Save" Clicked="SaveClicked"/>
+      <Button Text="save" Clicked="SaveClicked"/>
 
     </StackLayout>
   </ContentPage.Content>

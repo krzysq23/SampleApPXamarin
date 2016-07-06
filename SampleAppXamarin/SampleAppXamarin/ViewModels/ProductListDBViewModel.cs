@@ -79,7 +79,7 @@ namespace SampleAppXamarin.ViewModels
 
             try
             {
-                var products = App.Database.GetProducts();
+                var products = App.ProductManager.GetProducts();
                 ProductItems.Clear();
                 foreach (var todo in products)
                 {

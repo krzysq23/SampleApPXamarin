@@ -14,16 +14,16 @@ namespace SampleAppXamarin.ViewModels
 {
     public class ProductImageEditViewModel : ViewModelBase
     {
+        private ProductImage _productImage = new ProductImage();
 
         public ProductImageEditViewModel(Product item)
         {
             Title = AppResource.ProductImageEdit;
-            ProductImage = item;
+            _productImage.ProductId = item.Id;
         }
 
         #region ProductImage
-        private Product _productImage = new Product();
-        public Product ProductImage
+        public ProductImage ProductImage
         {
             get { return _productImage; }
             set

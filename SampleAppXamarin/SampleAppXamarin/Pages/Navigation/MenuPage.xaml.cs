@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 
 namespace SampleAppXamarin.Pages
@@ -16,7 +15,6 @@ namespace SampleAppXamarin.Pages
             InitializeComponent();
 
             masterPage.ListView.ItemSelected += OnItemSelected;
-
         }
 
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)

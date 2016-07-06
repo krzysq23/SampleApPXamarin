@@ -80,5 +80,7 @@ C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin\obj\Debug\SampleApp
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin\obj\Debug\SampleAppXamarin.Pages.Navigation.MasterPage.xaml.g.cs
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin\obj\Debug\SampleAppXamarin.Pages.Products.ProductImageEditPage.xaml.g.cs
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin\obj\Debug\SampleAppXamarin.Pages.Products.ProductImagePage.xaml.g.cs
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin\obj\Debug\SampleAppXamarin.csprojResolveAssemblyReference.cache
+C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin\obj\Debug\SampleAppXamarin.Pages.Products.ImageEditPage.xaml.g.cs
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin\obj\Debug\SampleAppXamarin.dll.mdb
 C:\Projects\SampAppXamarin\SampleAppXamarin\SampleAppXamarin\bin\Debug\SampleAppXamarin.dll.mdb

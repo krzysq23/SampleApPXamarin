@@ -36,7 +36,7 @@ namespace SampleAppXamarin.ViewModels
                 if (_selectedProductImageItem != null)
                 {
                     var navigation = Application.Current.MainPage as NavigationPage;
-                    navigation.PushAsync(new Pages.ImagePage(_selectedProductImageItem));
+                    navigation.PushAsync(new Pages.ImageEditPage(_selectedProductImageItem));
                     SelectedProductImageItem = null;
                 }
             }
@@ -81,7 +81,7 @@ namespace SampleAppXamarin.ViewModels
 
             try
             {
-                var productImages = App.Database.GetProductsImage(_item.Id);
+                var productImages = App.ProductImageManager.GetProductsImage(_item.Id);
                 ProductImages.Clear();
                 foreach (var pr in productImages)
                 {
